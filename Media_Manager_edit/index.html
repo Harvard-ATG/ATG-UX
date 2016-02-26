@@ -1,21 +1,29 @@
 <html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<!-- Prorotype comment - BASE tag -->
+<!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - start -->
+<base href="https://media-management-lti.dev.tlt.harvard.edu" target="_blank">
+<!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - end -->
   <link rel="stylesheet" href="/static/app/css/vendor.css">
   <link rel="stylesheet" href="/static/app/css/styles.css">
   <script src="/static/app/js/vendor.js"></script><style type="text/css"></style>
   <script src="/static/app/js/app.js"></script>
+<!-- Prorotype comment - removing the following script to render the page locally -->
   <script>
-window.appConfig = {
-    "access_token": "9w915-rhve7kba8rgrtjxoe5hkagwaaaa",
-    "course_id": 3,
-    "media_management_api_url": "https://media-management-api.dev.tlt.harvard.edu/api",
-    "perms": {
-        "edit": true,
-        "read": true
-    }
-};
+// window.appConfig = {
+//     "access_token": "hwuva5vqsfj0xduxx2nliut05y8gqaaaa",
+//     "course_id": 3,
+//     "media_management_api_url": "https://media-management-api.dev.tlt.harvard.edu/api",
+//     "perms": {
+//         "edit": true,
+//         "read": true
+//     }
+// };
   </script>
 </head>
-<body ng-app="media_manager" class="ng-scope">
+<!-- UI comment - adding margin-top:-5em to use vertical empty area -->
+<body ng-app="media_manager" class="ng-scope" style="margin-top:-5em">
+<!-- UI comment - wrap content in a container-fluid div to allow padding with left nav -->
+  <div class="container-fluid">
 
 <!--
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -39,31 +47,76 @@ window.appConfig = {
   </nav>
 -->
 
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope"><ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope">
-  <!-- ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/" class="ng-binding">List Collections</a></li><!-- end ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/workspace/1" class="ng-binding">Manage Collection</a></li><!-- end ngRepeat: crumb in crumbs -->
-</ol></div>
-
-<!-- ngIf: wc.canEdit --><div ng-if="wc.canEdit" class="container-fluid ng-scope">
-  <div class="row">
+<!-- UI comment - replace List Collections breadcrumb with a page header -->
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><!-- <div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope"><ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope"> -->
+  <!-- ngRepeat: crumb in crumbs --><!-- <li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/" class="ng-binding">List Collections</a></li> --><!-- end ngRepeat: crumb in crumbs --><!-- <li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/workspace/1" class="ng-binding">Manage Collection</a></li> --><!-- end ngRepeat: crumb in crumbs -->
+<!-- </ol> --></div>
+<h3>Media Manager Collections</h3>
+<h4>Edit Collection "collection_name"</h4>
+<!-- ngIf: wc.canEdit --><div ng-if="wc.canEdit" class="ng-scope">
+<!-- UI comment - no need of this div "row" -->
+  <!-- <div class="row"> -->
     <div class="col-md-12">
         <!-- ngRepeat: message in wc.notifications.messages track by $index -->
-    
-        <h2>Image Library</h2>
+<!-- UI comment - adding a panel to clarify user's tasks -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Image Library</h3>
+          </div>
+          <!-- List group -->
+          <div class="panel-body">
+              <h5>Step 1: Choose in your computer image files to add to this image library</h5>
+<!-- UI comment - moving the Choose Image inteface in the first row of the panel -->
+<!-- UI comment - there shall be only one "container-fluid" div -->
         <div ng-show="wc.isLoading.status" style="position:relative" class="ng-hide">
           <span us-spinner="{top:0,left:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 0px;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
         </div>
-        <div>
+
+<div>
             <section class="droplet image-library" ng-class="{ uploading: wc.Droplet.interface.isUploading() }">
               <droplet ng-model="wc.Droplet.interface" class="ng-pristine ng-untouched ng-valid ng-binding ng-isolate-scope">
-                <input class="droplet-upload droplet-multiple ng-isolate-scope ng-valid" type="file" multiple="multiple" ng-model="wc.Droplet.interface">
+<!-- UI comment - I am kind of pushing it now but I hope this work, as I tried to stylize the Chhose Image button -->
+<style>
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+</style>
+                <span class="btn btn-primary btn-file">
+                  Choose Image <input class="droplet-upload droplet-multiple ng-isolate-scope ng-valid" type="file" multiple="multiple" ng-model="wc.Droplet.interface">
+                </span>
                 <div style="position:relative">
                       <div class="drag-and-drop-overlay">Drag &amp; Drop</div>
                       <ul class="files files-queued">
-                          <!-- ngRepeat: model in wc.Droplet.interface.getFiles(wc.Droplet.interface.FILE_TYPES.VALID) -->
+                          <!-- ngRepeat: model in wc.Droplet.interface.getFiles(wc.Droplet.interface.FILE_TYPES.VALID) --><li ng-repeat="model in wc.Droplet.interface.getFiles(wc.Droplet.interface.FILE_TYPES.VALID)" class="ng-scope">
+<!-- Prototype comment - replacing the pesky binary code with a placeholder image -->
+                              <img ng-show="model.isImage()" src="https://raw.githubusercontent.com/Harvard-University-iCommons/UX-Prototypes/master/review/Media_Manager_edit.png" class="droplet-preview ng-isolate-scope ng-valid" ng-model="model">
+                              <div class="delete" ng-click="model.deleteFile()">×</div>
+                              <section class="filename ng-binding ng-hide" ng-show="!model.isImage()">20120619_172107_dt.png</section>
+                          </li><!-- end ngRepeat: model in wc.Droplet.interface.getFiles(wc.Droplet.interface.FILE_TYPES.VALID) -->
                       </ul>
                 </div>
-                <input type="button" class="btn btn-primary" value="Upload Files" ng-disabled="wc.Droplet.interface.isUploading() || wc.filesToUpload == 0" ng-click="wc.Droplet.uploadFiles()" disabled="disabled">
-                <label>Total files to upload:</label> 0
+                <div><hr></div>
+                <h5>Step 2: Add the above images to this image library</h5>
+                <input type="button" class="btn btn-primary" value="Add Images" ng-disabled="wc.Droplet.interface.isUploading() || wc.filesToUpload == 0" ng-click="wc.Droplet.uploadFiles()" disabled="disabled">
+                <label>Total images to add:</label> 0
+                <div><hr></div>
+                <h4>Images in this image library</h4>
                 <ul class="files">
                   <!-- ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                     <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F2%2F4cb7384d0e49eb880858b5661bae4d08.jpg/full/163,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
@@ -262,14 +315,22 @@ window.appConfig = {
               </droplet>
             </section>
         </div>
+      </div> <!-- panel-body -->
+        </div>
+<!-- UI comment - removing the current header -->
+        <!-- <h2>Image Library</h2> -->
 
-        <h2>Collection</h2>
-        <div>Select images from the library to add to the collection.</div>
+        
+<!-- UI comment - removing the current header and caption-->
+        <!-- <h2>Collection</h2>
+        <div>Select images from the library to add to the collection.</div> -->
         <div id="image-collection-panel" class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><span editable-text="wc.collection.title" class="ng-scope ng-binding editable editable-click">My head</span></h3>
+            <h3 class="panel-title">Collection <span editable-text="wc.collection.title" class="ng-scope ng-binding editable editable-click">collection_name</span></h3>
           </div>
           <div class="panel-body">
+                <h5>Step 3: Select in the image library the images to add to this collection.</h5>
+                <div><hr></div>
             <div ng-show="wc.isLoadingCollection.status || wc.isSavingCollection.status" class="ng-hide">
                 <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
             </div>
@@ -282,16 +343,19 @@ window.appConfig = {
             </ul>
           </div>
           <div class="panel-footer">
-            <input type="button" class="btn btn-primary" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
-            <input type="button" class="btn btn-default pull-right" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
-            <input type="button" class="btn btn-danger pull-right" value="Delete Collection" ng-show="wc.canDeleteCollection()" ng-click="wc.deleteCollection()">
+            <input type="button" class="btn btn-default" value="Cancel" ng-click="wc.cancelCollection()">
+<!-- UI comment - remove "Delete Collection" button since collections are deleted in the home page. This page is just about making or cancelling editing choices -->
+            <!-- <input type="button" class="btn btn-danger" value="Delete Collection" ng-show="wc.canDeleteCollection()" ng-click="wc.deleteCollection()"> -->
+<!-- UI comment - we can user test this but I don't think we need to specify "Save Collection" since it seems obvious and it doesn't need to be distinguished from another "Save" button -->
+            <input type="button" class="btn btn-primary pull-right" value="Save" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
           </div>
         </div>
 
     </div>
   </div>
 </div><!-- end ngIf: wc.canEdit -->
-</div>
+<!-- </div> --> <!-- row -->
+</div><!-- container-fluid -->
 
 
 </body></html>
