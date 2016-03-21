@@ -14,6 +14,16 @@ window.appConfig = {
     }
 };
   </script>
+<!-- UI comment - modifying vendor.css class to match glyphicon-cog font size with the one of the glyphicon-move icon -->
+<!-- UI comment - modifying vendor.css class to change the color of the background color of the breadcrumb class to white -->
+  <style>
+  .btn-sm {
+    font-size:1.2em;
+  }
+  .breadcrumb {
+    background-color: #ffffff;
+  }
+  </style>
 </head>
 <body ng-app="media_manager" class="ng-scope">
 
@@ -39,25 +49,33 @@ window.appConfig = {
   </nav>
 -->
 
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope"><ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope">
-  <!-- ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/" class="ng-binding">List Collections</a></li><!-- end ngRepeat: crumb in crumbs -->
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope">
+<!-- UI comment - h3 header breadcrumb as in other LTI tools, like Find Cousre Info -->
+  <ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope">
+  <!-- ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope">
+  <!-- UI comment - inline style to compensate for the spacing added by the header -->
+  <h3 style="margin-top:-.05em; margin-bottom:-.05em;">Media Maanger Collections</h3></li><!-- end ngRepeat: crumb in crumbs -->
 </ol>
 </div>
 
 <div class="row header-bar ng-scope">
   <div class="col-md-3">
-    <input ng-model="query" type="text" name="query" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search for Collection" aria-label="Search for Collection">
+    <!-- UI comment - change placeholder to "Filter List of Collections" -->
+    <input ng-model="query" type="text" name="query" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search for Collection" aria-label="Filter List of Collections">
   </div>
   <div class="col-md-9">
-    <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope"><a class="btn btn-primary pull-right" ng-href="/#/workspace" href="/#/workspace">+ Collection</a></div><!-- end ngIf: lc.canEdit -->
+    <!-- UI comment - Change "+ Collection" to "+ Add a Collection" -->
+    <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope"><a class="btn btn-primary pull-right" ng-href="/#/workspace" href="/#/workspace">+ Add a Collection</a></div><!-- end ngIf: lc.canEdit -->
   </div>
 </div>
 
 <span us-spinner="{top:200}" spinner-on="lc.isLoadingCollections.status" class="ng-scope"></span>
 
-<ul class="list-group ng-pristine ng-untouched ng-valid ng-scope" as-sortable="lc.dragControlListeners" ng-model="lc.collections">
+<!-- UI comment - wrapping the ul in a col-md-12 div to line up with the above div -->
+<div class="col-md-12">
+  <ul class="list-group ng-pristine ng-untouched ng-valid ng-scope" as-sortable="lc.dragControlListeners" ng-model="lc.collections">
   <!-- ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -75,7 +93,7 @@ window.appConfig = {
       <span class="badge ng-binding">2</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +111,7 @@ window.appConfig = {
       <span class="badge ng-binding">1</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -111,7 +129,7 @@ window.appConfig = {
       <span class="badge ng-binding">0</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -129,7 +147,7 @@ window.appConfig = {
       <span class="badge ng-binding">4</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -147,7 +165,7 @@ window.appConfig = {
       <span class="badge ng-binding">0</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -165,7 +183,7 @@ window.appConfig = {
       <span class="badge ng-binding">0</span>
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query --><li class="list-group-item clearfix ng-scope as-sortable-item" ng-repeat="collection in lc.collections | filter:query" as-sortable-item="">
-    <div class="glyphicon glyphicon-menu-hamburger pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
+    <div class="glyphicon glyphicon-menu-move pull-left collection-drag-handle ng-scope as-sortable-item-handle" as-sortable-item-handle="" aria-hidden="true"></div>
     <!-- ngIf: lc.canEdit --><div ng-if="lc.canEdit" class="ng-scope">
       <div class="btn-group dropdown pull-right" uib-dropdown="" is-open="status.isopen" style="">
         <button id="single-button" type="button" class="collection-edit-button btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
@@ -184,6 +202,7 @@ window.appConfig = {
     </div>
   </li><!-- end ngRepeat: collection in lc.collections | filter:query -->
 </ul>
+</div>
 </div>
 
 
