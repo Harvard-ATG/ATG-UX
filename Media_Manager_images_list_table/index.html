@@ -1,0 +1,57 @@
+<table class="files ng-scope" ng-if="wc.layout == 'list'">
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Image</th>
+                              <th>Title</th>
+                              <th>Date Created</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">1</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F34%2F33fbc9f625bb93e7159ffa2a8f30036c.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">Cosmos.jpg</td>
+                              <td class="ng-binding">03/10/2016 at 5:31PM</td>
+                              <td>
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
+                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
+                              </button></td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">2</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F33%2Feb0475b48179669c2cedc5b34e1bc726.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">blue_earth.jpg</td>
+                              <td class="ng-binding">03/10/2016 at 5:31PM</td>
+                              <td>
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
+                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
+                              </button></td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">3</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F32%2F57f6179d4b15ac622a8225679b5720ac.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">starwars-poster.jpg</td>
+                              <td class="ng-binding">03/07/2016 at 6:38PM</td>
+                              <td>
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
+                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
+                              </button></td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">4</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F31%2F551eaf945e2d6789cc69a8f9af7cd98e.png/full/319,200/0/default.png)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">Media_Manager_edit.png</td>
+                              <td class="ng-binding">02/26/2016 at 6:58PM</td>
+                              <td>
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
+                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
+                              </button></td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index -->
+                          
