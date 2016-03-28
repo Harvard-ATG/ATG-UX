@@ -1,20 +1,21 @@
+<!-- UI comment - changong the expand icon to the cog, since the gear icon better symbolize editing -->
                     <li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                       <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F4%2F9b565b0dbbf699a09ee89a38c40c9e3e.png/full/150,200/0/default.png)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
                       <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
                       <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
-                        <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                       </div>
                     </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                       <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F3%2Fe3ed069da7b742b49133a6b4949b05d2.jpg/full/79,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
                       <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
                       <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
-                        <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                       </div>
                     </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                       <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F2%2F4cb7384d0e49eb880858b5661bae4d08.jpg/full/163,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
                       <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
                       <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
-                        <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                       </div>
                     </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index -->
                   </ul><!-- end ngIf: wc.layout == 'gallery' -->
@@ -26,27 +27,53 @@
 
         <div id="image-collection-panel" class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Collection:
-              <button class="btn btn-sm btn-link" ng-click="collectionTitleForm.$show()" ng-hide="collectionTitleForm.$visible">
+<!-- UI comment - introducing the Bootstrap grid layout and input form -->
+            <div class="row">
+              <div class="col-md-1">
+<!-- UI comment - Adding inline sty;e to vertically align header -->
+            <h3 class="panel-title" style="margin-top:.5em">Collection:</h3>
+          </div><!-- /col-md-2 -->
+          <div class="col-md-5">
+              <!-- <button class="btn btn-sm btn-link" ng-click="collectionTitleForm.$show()" ng-hide="collectionTitleForm.$visible">
                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
               </button>
-              <span editable-text="wc.collection.title" e-form="collectionTitleForm" class="ng-scope ng-binding editable">Untitled Collection</span>
-            </h3>
+              <span editable-text="wc.collection.title" e-form="collectionTitleForm" class="ng-scope ng-binding editable">Untitled Collection</span> -->
+              <div class="input-group">
+      <input type="text" class="form-control" placeholder="[Collection very, very, very long name]">
+      <span class="input-group-btn">
+        <button class="btn btn-primary disabled" type="button">Update name</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /col-md-10 -->
+</div><!-- /row -->
+            
           </div>
           <div class="panel-body">
             <div ng-show="wc.isLoadingCollection.status || wc.isSavingCollection.status" class="ng-hide">
                 <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
             </div>
-            <h5>Step 3: Select images from the image library to add to this collection.</h5>
+<!-- UI comment - Adding a note that images can also be deleted from the collection -->
+<!-- UI comment - Adding a label to emphasize each step. Changing the header to h4, since it is a direct subset of the  above H3. Adding a line-height value so that when this text wraps, it doesn't get too close to the label with the step # -->
+            <h4 style="line-height: 150%;"><span class="label label-default">Step 3</span> Select images from the image library to add to this collection. You can also delete images from this collection.</h4>
             <hr>
             <div ng-show="wc.collection.images.length == 0" class="ng-hide">Empty collection</div>
-            <ul class="list-inline">
+<!-- UI comment - An alternative to the image mouse-over icons and add/delete/full view functionality to allow these controls to be accessible to people with disabilities  -->
+<!-- UI comment - Also added a Bootstrap tooltip showing the same information as in the list view  -->
+            <ul class="list-inline" style="height:6em">
               <!-- ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
-                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/179,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="collectionImage">
-                <div class="overlay" ng-click="wc.removeFromCollection($index)">-</div>
+                <div style="position: relative; z-index: 1;"><img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/179,200/0/default.jpg); position: absolute; z-index: 2;" class="droplet-preview ng-isolate-scope ng-valid" ng-model="collectionImage">
+                <span style="position: relative; z-index: 3;" class="tooltip-demo"><span data-toggle="tooltip" data-placement="right" title="John_Harvard_statue.jpg - 02/03/2016 at 9:08AM"><span class="glyphicon glyphicon-info-sign" style="margin-left: 3.35em; margin-top: .15em; color: #ffffff; font-size: 1.5em;"></span></span><span>
+                <br>
+                <span style="position: relative; bottom: -34px; left: 4px; z-index: 3;"><button type="button" class="btn btn-default" style="width: 2em; height: 2em;"><span class="glyphicon glyphicon-trash" style="margin-left: -.4em;"></span></button><span>
+                <span style="position: relative; z-index: 3; padding-left: 28px;"><button type="button" class="btn btn-default" style="width: 2em; height: 2em;"><span class="glyphicon glyphicon-cog" style="margin-left: -.4em;"></span></button><span></div>
+                <!-- <div class="overlay" ng-click="wc.removeFromCollection($index)">-</div> -->
               </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
-                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="collectionImage">
-                <div class="overlay" ng-click="wc.removeFromCollection($index)">-</div>
+                <div style="position: relative; z-index: 1; margin-left: 1em;"><img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg); position: absolute; z-index: 2;" class="droplet-preview ng-isolate-scope ng-valid" ng-model="collectionImage">
+                <span style="position: relative; z-index: 3;" class="tooltip-demo"><span data-toggle="tooltip" data-placement="right" title="HarvardYard.jpg - 02/12/2016 at 5:05PM"><span class="glyphicon glyphicon-info-sign" style="margin-left: 3.35em; margin-top: .15em; color: #ffffff; font-size: 1.5em;"></span></span><span>
+                <br>
+                <span style="position: relative; bottom: -34px; left: 4px; z-index: 3;"><button type="button" class="btn btn-default" style="width: 2em; height: 2em;"><span class="glyphicon glyphicon-trash" style="margin-left: -.4em;"></span></button><span>
+                <span style="position: relative; z-index: 3; padding-left: 28px;"><button type="button" class="btn btn-default" style="width: 2em; height: 2em;"><span class="glyphicon glyphicon-cog" style="margin-left: -.4em;"></span></button><span></div>
+                <!-- <div class="overlay" ng-click="wc.removeFromCollection($index)">-</div> -->
               </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index -->
             </ul>
           </div>
@@ -57,3 +84,9 @@
         </div>
 
     </div>
+
+    <!-- UI comment - adding Bootstrap tooltip styles and JS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://getbootstrap.com//assets/js/docs.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script><!-- / UI comment -->
