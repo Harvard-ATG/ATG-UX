@@ -4,7 +4,11 @@
                               <th></th>
                               <th>Image</th>
                               <th>Title</th>
-                              <th>Date Created</th>
+<!-- UI comment - Changed "Created" to "Added" -->
+                              <th>Date Added</th>
+<!-- UI comment - Adding all the image information -->
+                              <th>Description</th>
+                              <th>Metadata</th>
                               <th>Actions</th>
                           </tr>
                       </thead>
@@ -16,10 +20,14 @@
                               </td>
                               <td class="ng-binding">Cosmos.jpg</td>
                               <td class="ng-binding">03/10/2016 at 5:31PM</td>
-                              <td>
-                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
-                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
-                              </button></td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
+                              <td class="tooltip-demo">
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delete an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)" data-toggle="tooltip" data-placement="top" title="Edit image data"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)" data-toggle="tooltip" data-placement="top" title="Add to collection"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)" data-toggle="tooltip" data-placement="top" title="Delete this image"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
                           </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                               <td class="ng-binding">2</td>
                               <td>
@@ -27,10 +35,14 @@
                               </td>
                               <td class="ng-binding">blue_earth.jpg</td>
                               <td class="ng-binding">03/10/2016 at 5:31PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
                               <td>
-                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
-                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
-                              </button></td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delete an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)" data-toggle="tooltip" data-placement="top" title="Edit image data"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)" data-toggle="tooltip" data-placement="top" title="Add to collection"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)" data-toggle="tooltip" data-placement="top" title="Delete this image"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
                           </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                               <td class="ng-binding">3</td>
                               <td>
@@ -38,10 +50,14 @@
                               </td>
                               <td class="ng-binding">starwars-poster.jpg</td>
                               <td class="ng-binding">03/07/2016 at 6:38PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
                               <td>
-                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
-                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
-                              </button></td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delete an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)" data-toggle="tooltip" data-placement="top" title="Edit image data"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)" data-toggle="tooltip" data-placement="top" title="Add to collection"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)" data-toggle="tooltip" data-placement="top" title="Delete this image"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
                           </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
                               <td class="ng-binding">4</td>
                               <td>
@@ -49,9 +65,12 @@
                               </td>
                               <td class="ng-binding">Media_Manager_edit.png</td>
                               <td class="ng-binding">02/26/2016 at 6:58PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
                               <td>
-                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)">View Image
-                                  </button><button class="btn btn-primary" ng-click="wc.addToCollection(courseImage)">Add to Collection
-                              </button></td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delte an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)" data-toggle="tooltip" data-placement="top" title="Edit image data"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)" data-toggle="tooltip" data-placement="top" title="Add to collection"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)" data-toggle="tooltip" data-placement="top" title="Delete this image"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
                           </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index -->
-                          
