@@ -38,13 +38,87 @@ window.appConfig = {
     </div>
   </nav>
 -->
-
+<!-- UI comment - same header as the home page, use header as breadcrumb, as in other LTI tools -->
+  <!-- ngView:  --><div ng-view="" class="ng-scope">
+<!-- UI comment - modifying vendor.css class to change the color of the background color of the breadcrumb class to white -->
+  <style>
+  .btn-sm {
+    font-size:1.2em;
+  }
+  .breadcrumb {
+    background-color: #ffffff;
+  }
+  </style>
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope"><ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope">
-  <!-- ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/" class="ng-binding">List Collections</a></li><!-- end ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/workspace/7" class="ng-binding">Manage Collection</a></li><!-- end ngRepeat: crumb in crumbs --><li ng-repeat="crumb in crumbs" class="ng-scope"><a href="#/image/10" class="ng-binding">Image 6</a></li><!-- end ngRepeat: crumb in crumbs -->
+  <!-- ngRepeat: crumb in crumbs --><!-- UI comment - inline style to compensate for the spacing added by the header -->
+  <h3 style="margin-top:-.05em; margin-bottom:-.05em;"><a href="#/">Media Manager Collections</a>
+<!-- UI comment - using chevron as in LTI tools bredacrumbs -->
+    <small><span class="glyphicon glyphicon-chevron-right"></span></small>
+    <a href="#/">Edit Collection</a>
+    <small><span class="glyphicon glyphicon-chevron-right"></span></small>
+    Edit Image</li><!-- end ngRepeat: crumb in crumbs -->
 </ol>
 </div>
+<!-- UI comment - placing the collection name in a smaller header and adding a new paragraph with a description of the process to follow -->
+<div class="col-md-12">
+  <h4>
+    [Collection very, very, very long name]
+  </h4>
+  <p>
+    Edit the name of this image (from the default file name), add or change its description and the metadata information to facilitate searching.
+  </p>
+</div>
+<!-- UI comment - Example of form that shows current information - the Edit button is disabled and the Save and Cancel buttns are hidden -->
+<div class="col-md-6" style="margin-bottom:1em">
+  <div class="input-group">
+    <input type="text" class="form-control" aria-label="..."  placeholder="John_Harvard_statue.jpg">
+    <div class="input-group-btn">
+      <span class="input-group-btn">
+          <button class="btn btn-primary disabled" type="button">Edit</button>
+          <button class="btn btn-primary hidden" type="button">Save</button>
+          <button class="btn btn-default hidden" type="button">Cancel</button>
+        </span>
+    </div>
+  </div>
+</div>
+<!-- UI comment - Example of form that is being edited - the edit button is hidden and the Save and Cancel buttons are visible -->
+<div class="col-md-6" style="margin-bottom:1em">
+  <div class="input-group">
+    <input type="text" class="form-control" aria-label="..."  placeholder="Description">
+    <div class="input-group-btn">
+      <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Save</button>
+          <button class="btn btn-default" type="button">Cancel</button>
+        </span>
+    </div>
+  </div>
+</div>
 
-<div class="modal-header ng-scope">
+<div class="col-md-6" style="margin-bottom:1em">
+  <div class="input-group">
+    <input type="text" class="form-control" aria-label="..."  placeholder="Metadata">
+    <span class="input-group-addon" id="basic-addon2">:</span>
+    <input type="text" class="form-control" aria-label="..."  placeholder="Metadata">
+    <div class="input-group-btn">
+      <span class="input-group-btn">
+        <button class="btn btn-primary disabled" type="button">Edit</button>
+        <button class="btn btn-primary hidden" type="button">Save</button>
+        <button class="btn btn-default hidden" type="button">Cancel</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6" style="margin-bottom:1em">
+  <button class="btn btn-primary center-block" type="button" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    Delete this image
+  </button>
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<!-- <div class="modal-header ng-scope">
     <h3 class="modal-title">
       <button class="btn btn-sm btn-link" ng-click="titleForm.$show()" ng-hide="titleForm.$visible">
         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -61,9 +135,9 @@ window.appConfig = {
         No Description
       </span>
     </pp>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled"> -->
       <!-- ngRepeat: meta in ic.image.metadata track by $index -->
-      <li ng-hide="ic.editNewMetadata" class="">
+      <!-- <li ng-hide="ic.editNewMetadata" class="">
         <button class="btn btn-link" ng-click="ic.showNewMetadata()">New Metadata</button>
       </li>
       <li ng-show="ic.editNewMetadata" class="ng-hide">
@@ -82,9 +156,28 @@ window.appConfig = {
     <div>
       <button class="btn btn-danger pull-right" type="button" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)">Delete</button>
     </div>
+</div> -->
+<!-- UI comment - Bootstrap pagination UI -->
+<div class="col-md-4 col-md-offset-4" style="margin-top:-1em; margin-bottom:-1em">
+  <nav class="text-center">
+    <ul class="pagination pagination-lg">
+      <li>
+        <a href="#" aria-label="Previous" ng-click="ic.prev()">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a>35/39</a></li>
+      <li>
+        <a href="#" aria-label="Next" ng-click="ic.next()">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
-<div class="modal-body ng-scope">
-  <div class="text-center ng-binding">
+
+<div class="modal-body ng-scope col-md-12">
+  <!-- <div class="text-center ng-binding">
     35 / 39
   </div>
   <div class="text-center">
@@ -94,7 +187,7 @@ window.appConfig = {
     <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="ic.next()">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     </button>
-  </div>
+  </div> -->
   <img style="display: block; margin-left: auto; margin-right: auto; max-height: 400px;" ng-src="https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/full/0/default.jpg" src="https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/full/0/default.jpg">
 </div>
 <div class="modal-footer ng-scope">
