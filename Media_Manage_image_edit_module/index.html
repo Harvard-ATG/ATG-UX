@@ -2,10 +2,15 @@
     <h3 class="modal-title">Confirm Delete</h3>
 </div>
 <div class="modal-body ng-binding ng-scope">
-    Are you sure you want to delete image John_Harvard_statue.jpg (ID:6)? 
+    <p>
+    	Are you sure you want to delete image John_Harvard_statue.jpg (ID:6)?
+    </p>
+    <p>
+    	This image will be deleted from this Image Library and also from any collection it was added to.
+    </p>
 </div>
 <div class="modal-footer ng-scope">
     <button class="btn btn-primary" type="button" ng-click="cd.ok()">Yes</button>
-    <button class="btn btn-warning" type="button" ng-click="cd.cancel()">No</button>
+    <button class="btn btn-default pull-left" type="button" ng-click="cd.cancel()">No</button>
 </div>
 </div>
