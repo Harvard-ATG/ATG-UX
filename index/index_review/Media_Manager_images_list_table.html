@@ -1,0 +1,103 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <!-- UI comment - adding Bootstrap tooltip styles and JS --><link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="http://getbootstrap.com//assets/js/docs.min.js"></script><script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script><!-- / UI comment -->
+  <!-- Prototype - base tag --><link rel="stylesheet" href="Media_Manager_edit_2.css"><base href="https://media-management-lti.dev.tlt.harvard.edu" target="_blank"><!-- / Prototype --><link rel="stylesheet" href="file:///Users/vib450/Dropbox/ATG/Media_Manager_edit/proposed/vendor.css"><link rel="stylesheet" href="/static/app/css/vendor.css">
+  <link rel="stylesheet" href="/static/app/css/styles.css">
+  <script src="/static/app/js/vendor.js"></script><style type="text/css"></style>
+  <script src="/static/app/js/app.js"></script>
+  <!-- Prototype --> 
+<!-- window.appConfig = {
+    "access_token": "rnddnyrsibdbebcof5hsfuarddeuaaaaa",
+    "course_id": 3,
+    "media_management_api_url": "https://media-management-api.dev.tlt.harvard.edu/api",
+    "perms": {
+        "edit": true,
+        "read": true
+    }
+}; --><!-- /Prototype --> <script>
+  </script>
+</head>
+<body ng-app="media_manager" class="ng-scope">
+
+  <table class="files ng-scope" ng-if="wc.layout == 'list'">
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Image</th>
+                              <th>Title</th>
+<!-- UI comment - Changed "Created" to "Added" -->
+                              <th>Date Added</th>
+<!-- UI comment - Adding all the image information -->
+                              <th>Description</th>
+                              <th>Metadata</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">1</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F34%2F33fbc9f625bb93e7159ffa2a8f30036c.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">Cosmos.jpg</td>
+                              <td class="ng-binding">03/10/2016 at 5:31PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
+                              <td class="tooltip-demo">
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delte an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)" data-toggle="tooltip" data-placement="top" title="Edit image data"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)" data-toggle="tooltip" data-placement="top" title="Add to collection"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)" data-toggle="tooltip" data-placement="top" title="Delete this image"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">2</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F33%2Feb0475b48179669c2cedc5b34e1bc726.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">blue_earth.jpg</td>
+                              <td class="ng-binding">03/10/2016 at 5:31PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
+                              <td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delte an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">3</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F32%2F57f6179d4b15ac622a8225679b5720ac.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">starwars-poster.jpg</td>
+                              <td class="ng-binding">03/07/2016 at 6:38PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
+                              <td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delte an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><tr ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+                              <td class="ng-binding">4</td>
+                              <td>
+                                  <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F31%2F551eaf945e2d6789cc69a8f9af7cd98e.png/full/319,200/0/default.png)" class="droplet-preview ng-isolate-scope ng-valid" ng-model="courseImage">
+                              </td>
+                              <td class="ng-binding">Media_Manager_edit.png</td>
+                              <td class="ng-binding">02/26/2016 at 6:58PM</td>
+                              <td class="ng-binding">Milky Way, Astronomy</td>
+                              <td class="ng-binding">Assignment 1:Constellations</td>
+                              <td>
+<!-- UI comment - Adding the same icons as in the grid view for consistency -->
+<!-- UI comment - Adding the fucntionality to delte an image form here -->
+                                  <button class="btn btn-default" ng-click="wc.imageView(courseImage.id)"><span class="glyphicon glyphicon-cog"></span></button><button class="btn btn-default" ng-click="wc.addToCollection(courseImage)"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-default" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)"><span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                              </td>
+                          </tr><!-- end ngRepeat: courseImage in wc.courseImages track by $index -->
+                      </tbody>
+                  </table>
+
+
+
+
+</body></html>

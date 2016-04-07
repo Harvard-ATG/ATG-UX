@@ -1,0 +1,253 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <!-- Prototype - base tag --><link rel="stylesheet" href="Media_Manager_edit_2.css"><base href="https://media-management-lti.dev.tlt.harvard.edu" target="_blank"><!-- / Prototype --><link rel="stylesheet" href="/static/app/css/vendor.css">
+  <link rel="stylesheet" href="/static/app/css/styles.css">
+  <script src="/static/app/js/vendor.js"></script><style type="text/css"></style>
+  <script src="/static/app/js/app.js"></script>
+  <!-- Prototype --> 
+<!-- window.appConfig = {
+    "access_token": "rnddnyrsibdbebcof5hsfuarddeuaaaaa",
+    "course_id": 3,
+    "media_management_api_url": "https://media-management-api.dev.tlt.harvard.edu/api",
+    "perms": {
+        "edit": true,
+        "read": true
+    }
+}; --><!-- /Prototype --> <script>
+  </script>
+</head>
+<body ng-app="media_manager" class="ng-scope">
+
+<!--
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Media Manager</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/#/workspace">Workspace</a></li>
+          <li><a href="/#/collections">Collections</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+-->
+<!-- UI comment - same header as the home page, use header as breadcrumb, as in other LTI tools -->
+  <!-- ngView:  --><div ng-view="" class="ng-scope">
+<!-- UI comment - modifying vendor.css class to change the color of the background color of the breadcrumb class to white -->
+  <style>
+  .btn-sm {
+    font-size:1.2em;
+  }
+  .breadcrumb {
+    background-color: #ffffff;
+  }
+  </style>
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude:  --><div data-ng-include="" data-src="'/static/app/templates/breadcrumbs.html'" class="ng-scope"><ol ng-controller="BreadcrumbsController" class="breadcrumb ng-scope">
+  <!-- ngRepeat: crumb in crumbs --><!-- UI comment - inline style to compensate for the spacing added by the header -->
+  <h3 style="margin-top:-.05em; margin-bottom:-.05em;"><a href="#/">Media Manager Collections</a>
+<!-- UI comment - using chevron as in LTI tools bredacrumbs -->
+    <small><span class="glyphicon glyphicon-chevron-right"></span></small>
+    <a href="#/">Edit Collection</a>
+    <small><span class="glyphicon glyphicon-chevron-right"></span></small>
+    Edit Image</li><!-- end ngRepeat: crumb in crumbs -->
+</ol>
+</div>
+<!-- UI comment - placing the collection name in a smaller header and adding a new paragraph with a description of the process to follow -->
+<div class="col-md-12">
+  <h4>
+    [Collection very, very, very long name]
+  </h4>
+  
+</div>
+<!-- UI comment - Example of form that shows current information - the Edit button is disabled and the Save and Cancel buttns are hidden -->
+<div class="col-md-7">
+  <div class="panel panel-primary"><!-- left panel -->
+  <div class="panel-heading">
+    <h3 class="panel-title">View Image Libray images</h3>
+  </div>
+  <div class="panel-body">
+    <nav class="text-center">
+    <ul class="pagination pagination-lg">
+      <li>
+        <a href="#" aria-label="Previous" ng-click="ic.prev()">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a>35/39</a></li>
+      <li>
+        <a href="#" aria-label="Next" ng-click="ic.next()">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+<div class="col-md-12 text-center"><h4>John_Harvard_statue.jpg</h4></div>
+
+<div class="modal-body ng-scope">
+  <!-- <div class="text-center ng-binding">
+    35 / 39
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="ic.prev()">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="ic.next()">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+  </div> -->
+  <img style="display: block; margin-left: auto; margin-right: auto; max-height: 400px;" ng-src="https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/full/0/default.jpg" src="https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/full/0/default.jpg">
+</div>
+    <div class="col-md-12">
+      <button class="btn btn-primary pull-right" type="button" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        Delete this image
+          </button>
+    </div><!-- /col-md-12 -->
+</div><!-- /panel-body -->
+<!-- <div class="modal-footer ng-scope">
+</div> -->
+</div><!-- /left panel -->
+  
+</div><!-- /col-md-7 -->
+<!-- UI comment - using Bootstrap pagination UI -->
+<div class="col-md-5" style="margin-bottom:1em">
+  <div class="panel panel-default"><!-- right panel -->
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit information of this image</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+    Edit the name of this image (from the default file name), add or change its description and the search information.
+  </p>
+  <p>
+    This edited information will apper on all the instances of this image in each collection.
+  </p>
+
+    <div class="col-md-12" style="margin-top:1em"><label for="ImageName">Image name</label></div>
+    <div class="input-group">
+      <input type="text" class="form-control" aria-label="..."  id="ImageName" placeholder="John_Harvard_statue.jpg">
+        <div class="input-group-btn">
+        <span class="input-group-btn">
+          <button class="btn btn-primary disabled" type="button">Edit</button>
+          <button class="btn btn-primary hidden" type="button">Save</button>
+          <button class="btn btn-default hidden" type="button">Cancel</button>
+        </span>
+      </div>
+    </div><!-- /input-group -->
+
+ <!-- UI comment - Example of form that is being edited - the edit button is hidden and the Save and Cancel buttons are visible -->
+    <div class="col-md-12" style="margin-top:1em"><label for="Description">Image description</label></div>
+    <div class="input-group">
+      <textarea class="form-control" rows="1"  placeholder="Description"></textarea>
+      <div class="input-group-btn">
+        <span class="input-group-btn">
+          <button class="btn btn-primary hidden" type="button">Edit</button>
+            <button class="btn btn-primary" type="button">Save</button>
+            <button class="btn btn-default" type="button">Cancel</button>
+          </span>
+      </div>
+    </div><!-- /input-group -->
+
+    <div class="col-md-12" style="margin-top:1em"><label for="MetadataDSelect">Search information</label></div>
+
+<!-- UI comment - use Bootstrap has-success class to highlight a successfully edited form -->
+  <div class="input-group has-success">
+    <select id="MetadataDSelect" class="form-control">
+      <option>Title</option>
+      <option>Date</option>
+      <option>Creator</option>
+      <option>Copyright</option>
+      <option>Material or Technique</option>
+      <option>Type</option>
+      <option selected>Subject</option>
+      <option>Repository</option>
+    </select>
+    <span class="input-group-addon" id="basic-addon2">:</span>
+    <input type="text" class="form-control" aria-label="..."  placeholder="Harvard History">
+    <div class="input-group-btn">
+      <span class="input-group-btn">
+        <button class="btn btn-primary disabled" type="button">Edit</button>
+        <button class="btn btn-primary hidden" type="button">Save</button>
+        <button class="btn btn-default hidden" type="button">Cancel</button>
+      </span>
+    </div>
+    </div><!-- /input-group -->
+
+<!-- UI comment - Example of an additional medatada form upon saving the previous metadata information -->
+  <div class="input-group" style="margin-top:1em">
+    <select id="MetadataDSelect" class="form-control">
+      <option>Title</option>
+      <option>Date</option>
+      <option>Creator</option>
+      <option>Copyright</option>
+      <option>Material or Technique</option>
+      <option>Type</option>
+      <option>Subject</option>
+      <option>Repository</option>
+    </select>
+    <span class="input-group-addon" id="basic-addon2">:</span>
+    <input type="text" class="form-control" aria-label="..."  placeholder="(e.g.: Historical)">
+    <div class="input-group-btn">
+      <span class="input-group-btn">
+        <button class="btn btn-primary disabled" type="button">Edit</button>
+        <button class="btn btn-primary hidden" type="button">Save</button>
+        <button class="btn btn-default hidden" type="button">Cancel</button>
+      </span>
+    </div>
+    </div><!-- /input-group -->
+
+  </div><!-- /panel-body -->
+</div><!-- /right panel -->
+
+</div><!-- /col-md-5 -->
+
+
+<!-- <div class="modal-header ng-scope">
+    <h3 class="modal-title">
+      <button class="btn btn-sm btn-link" ng-click="titleForm.$show()" ng-hide="titleForm.$visible">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+      </button>
+      <span editable-text="ic.CourseCache.current_image.title" e-form="titleForm" ng-click="titleForm.$show()" onbeforesave="ic.save()" class="ng-scope ng-binding editable">
+        John_Harvard_statue.jpg
+      </span>
+    </h3>
+    <pp>
+      <button class="btn btn-sm btn-link" ng-click="descForm.$show()" ng-hide="descForm.$visible">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+      </button>
+      <span editable-text="ic.CourseCache.current_image.description" e-form="descForm" ng-click="descForm.$show()" onbeforesave="ic.save()" class="ng-scope ng-binding editable editable-empty">
+        No Description
+      </span>
+    </pp>
+    <ul class="list-unstyled"> -->
+      <!-- ngRepeat: meta in ic.image.metadata track by $index -->
+      <!-- <li ng-hide="ic.editNewMetadata" class="">
+        <button class="btn btn-link" ng-click="ic.showNewMetadata()">New Metadata</button>
+      </li>
+      <li ng-show="ic.editNewMetadata" class="ng-hide">
+        <form ng-submit="ic.saveMetadata()" class="ng-pristine ng-valid">
+          <input type="text" ng-model="ic.newLabel" focus="ic.editNewMetadata" class="ng-pristine ng-valid ng-touched">:
+          <input type="text" ng-model="ic.newValue" class="ng-pristine ng-untouched ng-valid">
+          <button type="submit" class="btn btn-primary">
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+          <button type="button" class="btn btn-default" ng-click="ic.hideNewMetadata()">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </form>
+      </li>
+    </ul>
+    <div>
+      <button class="btn btn-danger pull-right" type="button" ng-click="ic.imageBehavior.deleteImageModal(ic.CourseCache.current_image.id)">Delete</button>
+    </div>
+</div> -->
+
+
+</body></html>
