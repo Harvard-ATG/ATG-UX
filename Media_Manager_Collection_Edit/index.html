@@ -8,10 +8,12 @@
           </h3>
         </div>
         <ul class="list-group">
-          <li class="list-group-item">
-            <button type="button" class="btn btn-primary" ng-click="wc.hideLibrary = !wc.hideLibrary">
+<!-- UI comment - For some reason, just using "pull-right" cause half of the button to be hidden behind the next panel row. Adding padding via an inline style resolves this, although I know I may need to find a better solution  -->
+          <li class="list-group-item" style="padding-bottom: 3em">
+<!-- UI comment - Moving the button to the right, adding to the button a similar triangle to the drop down -->
+            <button type="button" class="btn btn-primary pull-right" ng-click="wc.hideLibrary = !wc.hideLibrary">
               <!-- ngIf: wc.hideLibrary --><span ng-if="wc.hideLibrary" class="ng-scope">Add Images</span><!-- end ngIf: wc.hideLibrary -->
-              <!-- ngIf: !wc.hideLibrary -->
+              <!-- ngIf: !wc.hideLibrary --><small><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></small>
             </button>
           </li>
           <li class="list-group-item">
@@ -45,8 +47,9 @@
             </ul>
           </li>
         </ul>
+<!-- UI comment - Swapping the buttons -->
         <div class="panel-footer">
-          <input type="button" class="btn btn-primary" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
-          <input type="button" class="btn btn-default pull-right" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
+          <input type="button" class="btn btn-primary pull-right" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
+          <input type="button" class="btn btn-default" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
         </div>
       </div>
