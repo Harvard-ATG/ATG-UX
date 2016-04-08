@@ -11,10 +11,9 @@
         </div>
         <ul class="list-group">
           <li class="list-group-item" style="padding-bottom: 3em">
-<!-- UI comment - Pointing the button triangle to the opposite direction, adding an &nbsp; just for a bit of spacing -->
             <button type="button" class="btn btn-primary pull-right" ng-click="wc.hideLibrary = !wc.hideLibrary">
               <!-- ngIf: wc.hideLibrary -->
-              <!-- ngIf: !wc.hideLibrary --><span ng-if="!wc.hideLibrary" class="ng-scope">Close Library&nbsp;</span><!-- end ngIf: !wc.hideLibrary --><small><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></small>
+              <!-- ngIf: !wc.hideLibrary --><span ng-if="!wc.hideLibrary" class="ng-scope">Close Library</span><!-- end ngIf: !wc.hideLibrary --><small><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></small>
             </button>
           </li>
           <li class="list-group-item">
@@ -50,13 +49,11 @@
         </ul>
         <div class="panel-footer">
           <input type="button" class="btn btn-primary pull-right" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
-<!-- UI comment - removing style="margin-left: 20px;" -->
-          <input type="button" class="btn btn-default" value="Cancel" ng-click="wc.cancelCollection()">
+          <input type="button" class="btn btn-default" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
         </div>
       </div>
     </div>
-<!-- UI comment - Changing Image Library panel to "primary" -->
-    <!-- ngInclude: '/static/app/templates/library.html' --><div ng-include="'/static/app/templates/library.html'" ng-class="wc.hideLibrary ? 'col-md-0' : 'col-md-6'" ng-hide="wc.hideLibrary" class="ng-scope col-md-6" style=""><div class="panel panel-primary ng-scope">
+    <!-- ngInclude: '/static/app/templates/library.html' --><div ng-include="'/static/app/templates/library.html'" ng-class="wc.hideLibrary ? 'col-md-0' : 'col-md-6'" ng-hide="wc.hideLibrary" class="ng-scope col-md-6" style=""><div class="panel panel-default ng-scope">
   <div class="panel-heading">
     <h3 class="panel-title">Image Library</h3>
   </div>
