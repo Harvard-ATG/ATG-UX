@@ -1,0 +1,52 @@
+<div id="image-collection-panel" class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Collection:
+            <button class="btn btn-sm btn-link" ng-click="collectionTitleForm.$show()" ng-hide="collectionTitleForm.$visible">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            </button>
+            <span editable-text="wc.collection.title" e-form="collectionTitleForm" class="ng-scope ng-binding editable">Test Collection</span>
+          </h3>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <button type="button" class="btn btn-primary" ng-click="wc.hideLibrary = !wc.hideLibrary">
+              <!-- ngIf: wc.hideLibrary --><span ng-if="wc.hideLibrary" class="ng-scope">Add Images</span><!-- end ngIf: wc.hideLibrary -->
+              <!-- ngIf: !wc.hideLibrary -->
+            </button>
+          </li>
+          <li class="list-group-item">
+            <div ng-show="wc.isLoadingCollection.status || wc.isSavingCollection.status" class="ng-hide" style="">
+                <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
+            </div>
+            <div ng-show="wc.collection.images.length == 0" class="ng-hide">Empty collection</div>
+            <ul class="list-inline">
+              <!-- ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F16%2F0e6cd0fc9086f5a1cc1cab5ce4966cf5.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F17%2F24a9e8c175ff675f8f57514af7470408.jpg/full/314,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F18%2F29ef57533c86ceffc2333e83aa00e498.jpg/full/312,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F16%2F0e6cd0fc9086f5a1cc1cab5ce4966cf5.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F19%2F0f9e24c3f439bc00b2dfc0e644b532e2.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F13%2F36c2969f6fb38d8a8960e39774b033fc.jpg/full/477,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index -->
+            </ul>
+          </li>
+        </ul>
+        <div class="panel-footer">
+          <input type="button" class="btn btn-primary" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
+          <input type="button" class="btn btn-default pull-right" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
+        </div>
+      </div>
