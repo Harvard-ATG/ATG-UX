@@ -1,0 +1,289 @@
+<div class="row no-margin">
+    <div ng-class="wc.hideLibrary ? 'col-md-12' : 'col-md-6'" class="col-md-6" style="">
+      <div id="image-collection-panel" class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Collection:
+            <button class="btn btn-sm btn-link" ng-click="collectionTitleForm.$show()" ng-hide="collectionTitleForm.$visible">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            </button>
+            <span editable-text="wc.collection.title" e-form="collectionTitleForm" class="ng-scope ng-binding editable">Test Collection</span>
+          </h3>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item" style="padding-bottom: 3em">
+            <button type="button" class="btn btn-primary pull-right" ng-click="wc.hideLibrary = !wc.hideLibrary">
+              <!-- ngIf: wc.hideLibrary -->
+              <!-- ngIf: !wc.hideLibrary --><span ng-if="!wc.hideLibrary" class="ng-scope">Close Library</span><!-- end ngIf: !wc.hideLibrary --><small><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></small>
+            </button>
+          </li>
+          <li class="list-group-item">
+            <div ng-show="wc.isLoadingCollection.status || wc.isSavingCollection.status" class="ng-hide" style="">
+                <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
+            </div>
+            <div ng-show="wc.collection.images.length == 0" class="ng-hide">Empty collection</div>
+            <ul class="list-inline">
+              <!-- ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F16%2F0e6cd0fc9086f5a1cc1cab5ce4966cf5.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F17%2F24a9e8c175ff675f8f57514af7470408.jpg/full/314,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F18%2F29ef57533c86ceffc2333e83aa00e498.jpg/full/312,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F16%2F0e6cd0fc9086f5a1cc1cab5ce4966cf5.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F19%2F0f9e24c3f439bc00b2dfc0e644b532e2.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index --><li class="droplet-thumb ng-scope" ng-repeat="collectionImage in wc.collection.images track by $index">
+                <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F13%2F36c2969f6fb38d8a8960e39774b033fc.jpg/full/477,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="collectionImage">
+                <div class="overlay" ng-click="wc.removeFromCollection(collectionImage.id)">-</div>
+              </li><!-- end ngRepeat: collectionImage in wc.collection.images track by $index -->
+            </ul>
+          </li>
+        </ul>
+        <div class="panel-footer">
+          <input type="button" class="btn btn-primary pull-right" value="Save Collection" ng-click="wc.saveCollection()" ng-disabled="wc.isSavingCollection.status">
+          <input type="button" class="btn btn-default" style="margin-left: 20px;" value="Cancel" ng-click="wc.cancelCollection()">
+        </div>
+      </div>
+    </div>
+    <!-- ngInclude: '/static/app/templates/library.html' --><div ng-include="'/static/app/templates/library.html'" ng-class="wc.hideLibrary ? 'col-md-0' : 'col-md-6'" ng-hide="wc.hideLibrary" class="ng-scope col-md-6" style=""><div class="panel panel-default ng-scope">
+  <div class="panel-heading">
+    <h3 class="panel-title">Image Library</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-show="wc.isLoading.status" style="position:relative" class="ng-hide">
+      <span us-spinner="{top:0,left:'50%'}" class="ng-scope"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 0px;"><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div><div style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div style="position: absolute; width: 12px; height: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px; background: rgb(0, 0, 0);"></div></div></div></span>
+    </div>
+    <h5>Step 1: Choose image files on your computer to add to the library.</h5>
+    <section class="droplet image-library" ng-class="{ uploading: wc.Droplet.interface.isUploading() }">
+      <droplet ng-model="wc.Droplet.interface" class="ng-pristine ng-untouched ng-valid ng-binding ng-isolate-scope ng-not-empty">
+        <input class="droplet-upload droplet-multiple ng-isolate-scope ng-not-empty ng-valid" type="file" multiple="multiple" ng-model="wc.Droplet.interface">
+        <div style="position:relative">
+          <div class="library-drag-area">Drag &amp; Drop</div>
+          <ul class="files files-queued">
+              <!-- ngRepeat: model in wc.Droplet.interface.getFiles(wc.Droplet.interface.FILE_TYPES.VALID) -->
+          </ul>
+        </div>
+        <hr>
+        <h5>Step 2: Add the above images to this image library.</h5>
+        <input type="button" class="btn btn-primary" value="Add Images" ng-disabled="wc.Droplet.interface.isUploading() || wc.filesToUpload == 0" ng-click="wc.Droplet.uploadFiles()" disabled="disabled">
+        <label>Total images to add:</label> 0
+      </droplet>
+    </section>
+    <hr>
+    <h4>Images in this image library</h4>
+      <div style="margin-top: 20px">
+          <div class="btn-group pull-left dropdown" uib-dropdown="">
+              <button id="sort_images_button" type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
+                Sort Images <span class="caret"></span>
+              </button>
+              <ul uib-dropdown-menu="" role="menu" aria-labelledby="single-button" class="dropdown-menu">
+                  <!-- ngRepeat: choice in wc.sortChoices --><li role="menuitem" ng-repeat="choice in wc.sortChoices" class="ng-scope">
+                      <a href="#" ng-click="wc.onClickSortLibrary($event, choice)" class="ng-binding">Newest to Oldest</a>
+                  </li><!-- end ngRepeat: choice in wc.sortChoices --><li role="menuitem" ng-repeat="choice in wc.sortChoices" class="ng-scope">
+                      <a href="#" ng-click="wc.onClickSortLibrary($event, choice)" class="ng-binding">Oldest to Newest</a>
+                  </li><!-- end ngRepeat: choice in wc.sortChoices --><li role="menuitem" ng-repeat="choice in wc.sortChoices" class="ng-scope">
+                      <a href="#" ng-click="wc.onClickSortLibrary($event, choice)" class="ng-binding">Title</a>
+                  </li><!-- end ngRepeat: choice in wc.sortChoices -->
+              </ul>
+          </div>
+          <div class="pull-left" style="margin-left: 20px;">
+              Layout:
+              <div class="btn-group" role="group" aria-label="layout">
+                  <label class="btn btn-default ng-pristine ng-untouched ng-valid ng-not-empty active" ng-model="wc.layout" uib-btn-radio="'gallery'" uncheckable="">Gallery</label>
+                  <label class="btn btn-default ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="wc.layout" uib-btn-radio="'list'" uncheckable="">List</label>
+              </div>
+          </div>
+      </div>
+
+      <div style="clear:both; padding: 10px;" ng-show="wc.courseImages.length > 0" class="">
+          <!-- ngIf: wc.layout == 'gallery' --><ul class="files list-inline ng-scope" ng-if="wc.layout == 'gallery'">
+            <!-- ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F78%2Fbde86ac2fbb3bdc34c311e240249ac26.jpg/full/480,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F33%2Feb0475b48179669c2cedc5b34e1bc726.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F31%2F551eaf945e2d6789cc69a8f9af7cd98e.png/full/319,200/0/default.png)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F27%2F0ed8c5c874589cf580eb049656124000.jpg/full/163,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F26%2F58067b4726627d5e806bf7de0f7fb21c.jpg/full/199,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F30%2F750d86851732376a9c9a7fa618d96c4c.jpg/full/266,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F29%2F0526ae53312b7c11209f2446abc3d4c4.jpg/full/129,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F28%2F064c6db5ba4b92203d1baedd3b86bec6.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F27%2F0ed8c5c874589cf580eb049656124000.jpg/full/163,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F26%2F58067b4726627d5e806bf7de0f7fb21c.jpg/full/199,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F25%2F6bc3b64bc29b7f1584dafe5fd092c293.jpg/full/158,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F22%2F3dcf445e4a406ebaeb8e35d7edc78b87.jpg/full/597,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F21%2Febee63e0e8126ea2c34b6d37065b63ee.jpg/full/242,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F19%2F0f9e24c3f439bc00b2dfc0e644b532e2.jpg/full/320,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F18%2F29ef57533c86ceffc2333e83aa00e498.jpg/full/312,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F17%2F24a9e8c175ff675f8f57514af7470408.jpg/full/314,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F16%2F0e6cd0fc9086f5a1cc1cab5ce4966cf5.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F15%2F891d34ea58d91c854188c7ec66c05e5b.jpg/full/253,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F13%2F36c2969f6fb38d8a8960e39774b033fc.jpg/full/477,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F11%2F200f62e45fb8a5660a07f23a5dd16801.jpg/full/112,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F10%2F067170ddd7814f69a323131a97e31ab1.jpg/full/192,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F9%2F523d29e91f8e14d4d1f48aa28d5c97ce.jpg/full/200,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F8%2F0e0757fb166d932e89c5b3027e2b01b8.png/full/152,174/0/default.png)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F7%2Ff770474de7de4d72c5cb88e65c42ad74.jpg/full/267,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F6%2F8717130d4cd171a9b03af6118db6327a.jpg/full/179,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F4%2F9b565b0dbbf699a09ee89a38c40c9e3e.png/full/150,200/0/default.png)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F3%2Fe3ed069da7b742b49133a6b4949b05d2.jpg/full/79,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index --><!-- ngIf: courseImage.image_url --><li ng-if="courseImage.image_url" ng-repeat="courseImage in wc.courseImages track by $index" class="ng-scope">
+              <img style="background-image: url(https://loris.dev.tlt.harvard.edu/loris/atg-media-management-api-non-prod%2Fdev%2Fimages%2F2%2F4cb7384d0e49eb880858b5661bae4d08.jpg/full/163,200/0/default.jpg)" class="droplet-preview ng-isolate-scope ng-not-empty ng-valid" ng-model="courseImage">
+              <div class="overlay" ng-click="wc.addToCollection(courseImage)">+</div>
+              <div class="resize-overlay" ng-click="wc.imageView(courseImage.id)">
+                <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+              </div>
+            </li><!-- end ngIf: courseImage.image_url --><!-- end ngRepeat: courseImage in wc.courseImages track by $index -->
+          </ul><!-- end ngIf: wc.layout == 'gallery' -->
+          <!-- ngIf: wc.layout == 'list' -->
+      </div>
+  </div>
+</div>
+</div>
+  </div>
