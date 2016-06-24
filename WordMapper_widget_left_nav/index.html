@@ -1,18 +1,53 @@
+
+
+<!-- UI comment - dependency on issue https://github.com/Harvard-ATG/wordmapper/issues/4 -->
+<div class="wordmapper wordmapper-panel wordmapper-panel-top">
+
 <!-- UI comment - adding Bootstrap and Font-Awesome -->
 <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
 <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-<!-- UI comment - adding Font-awesome icons to each button -->
+<!-- UI comment - modifing the wordmapper-panel-top to change the Word Mapper widget as a left nav -->
+<style>
+.wordmapper-panel-top {
+    top: 0;
+    height: 24em;
+    width: 4.25em;
+    padding: .5em;
+}
+</style>
+
 <div class="wordmapper-buttons">
-    <button name="align" class="primary wordmapper-tooltip" title="Align highlighted words"><i class="fa fa-link"></i> Align</button>
+    
+    <div name="align" class="wordmapper-tooltip" title="Word Mapper 1.0"><i class="fa fa-map-marker" style="font-size: 2em; color:#A51C30; padding-left:.5em; margin-top:.5em;"></i></div>
+    <br>
+    <br>
+    
+<!-- UI comment - adding style="width:3em" to all buttons for consistent width -->
+    <button name="align" class="primary wordmapper-tooltip" title="Align highlighted words" style="width:3em"><i class="fa fa-link"></i></button>
+    <br>
 
 <!-- UI comment, remove the word "Highlights" to be consistent with the othehr buttons and since the tooltip provides the information -->
-    <button name="clear_highlights" class="wordmapper-tooltip" title="Clear highlighted words"><i class="fa fa-unlink"></i> Clear</button>
+    <button name="clear_highlights" class="wordmapper-tooltip" title="Clear highlighted words" style="width:3em"><i class="fa fa-unlink"></i></button>
+    <br>
 
 <!-- UI comment, removegthe word "Alignments" since it matches with the tooltip -->
-    <button name="clear_alignments" class="wordmapper-tooltip" title="Delete alignments" data-confirm="Are you sure you want to delete *ALL* alignments on this page?"><i class="fa fa-trash-o"></i> Delete</button>
+    <button name="clear_alignments" class="wordmapper-tooltip" title="Delete alignments" data-confirm="Are you sure you want to delete *ALL* alignments on this page?" style="width:3em"><i class="fa fa-trash-o"></i></button>
+    <br>
 
 <!-- UI comment - Remove the word "Build" to be consistent with the other buttons, which show only one word, one verb -->
-    <button name="build_index" class="wordmapper-tooltip" title="Build index of aligned words"><i class="fa fa-list"></i> Index</button>
-    <button name="export" class="wordmapper-tooltip" title="Export the aligned words"><i class="fa fa-download"></i> Export</button>
+    <button name="build_index" class="wordmapper-tooltip" title="Build index of aligned words" style="width:3em"><i class="fa fa-list"></i></button>
+    <br>
+
+    <button name="export" class="wordmapper-tooltip" title="Export the aligned words" style="width:3em"><i class="fa fa-download"></i></button>
+    <br>
+    <br>
+
+<!-- UI comment - adding a move, a icon-only bbuttons ,and a close button per issue https://github.com/Harvard-ATG/wordmapper/issues/2 -->
+    <button name="export" class="wordmapper-tooltip" title="Show or hide button text" style="width:3em"><i class="fa fa-minus-circle"></i></button>
+    <br>
+    <button name="export" class="wordmapper-tooltip" title="Left or top navigation" style="width:3em"><i class="fa fa-reply"></i></button>
+    <br>
+    <button name="export" class="wordmapper-tooltip" title="Close the Word Mapper widgget" style="width:3em"><i class="fa fa-times"></i></button>
   </div>
+</div>
