@@ -1,0 +1,81 @@
+<div class="wordmapper wordmapper-panel wordmapper-panel-top">
+  <div class="wordmapper-logo">
+    Word Mapper <small>v1.0</small>
+  </div>
+  <div class="wordmapper-buttons">
+    <button name="align" class="primary wordmapper-tooltip" alt="Align highlighted words"><i class="fa fa-link"></i> Align</button>
+    <button name="clear_highlights" class="wordmapper-tooltip" alt="Clear highlighted words"><i class="fa fa-unlink"></i> Clear</button>
+    <button name="clear_alignments" class="wordmapper-tooltip" alt="Delete alignments" data-confirm="Are you sure you want to delete *ALL* alignments on this page?"><i class="fa fa-trash-o"></i> Delete</button>
+    <button name="build_index" class="wordmapper-tooltip" alt="Build index of alignments"><i class="fa fa-list"></i> Index</button>
+    <button name="export" class="wordmapper-tooltip" alt="Export the alignments"><i class="fa fa-download"></i> Export</button>
+  </div>
+</div>
+
+<div class="wordmapper wordmapper-overlay ">
+  
+    <h2>Export</h2>
+  
+  <div class="wordmapper-dismiss" title="Dismiss" popout-exclude=""></div>
+  <div class="wordmapper-overlay-content">
+  <div>
+<!-- wordmapper/client/src/html/export.html -->
+Export data:
+<textarea name="export" class="json">{
+	"type": "site",
+	"id": "www.graeco-arabic-studies.org",
+	"url": "http://www.graeco-arabic-studies.org/compare-texts/work/ars-medica-2/left/1/section/10/active/1%2C2.html",
+	"data": {
+		"type": "alignments",
+		"data": [
+			{
+				"type": "alignment",
+				"data": [
+					{
+						"type": "word",
+						"data": {
+							"index": "20",
+							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
+							"value": "أسخن،"
+						}
+					},
+					{
+						"type": "word",
+						"data": {
+							"index": "75",
+							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
+							"value": "بالطبع،"
+						}
+					}
+				]
+			},
+			{
+				"type": "alignment",
+				"data": [
+					{
+						"type": "word",
+						"data": {
+							"index": "103",
+							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
+							"value": "النبض"
+						}
+					},
+					{
+						"type": "word",
+						"data": {
+							"index": "113",
+							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
+							"value": "القلب"
+						}
+					}
+				]
+			}
+		]
+	}
+}</textarea>
+
+Import data:
+<textarea name="import" class="json"></textarea>
+<button class="primary wordmapper-import">Import</button>
+<span class="wordmapper-import-messages"></span></div></div>
+  
+</div>
