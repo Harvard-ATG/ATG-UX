@@ -7,75 +7,67 @@
     <button name="clear_highlights" class="wordmapper-tooltip" alt="Clear highlighted words"><i class="fa fa-unlink"></i> Clear</button>
     <button name="clear_alignments" class="wordmapper-tooltip" alt="Delete alignments" data-confirm="Are you sure you want to delete *ALL* alignments on this page?"><i class="fa fa-trash-o"></i> Delete</button>
     <button name="build_index" class="wordmapper-tooltip" alt="Build index of alignments"><i class="fa fa-list"></i> Index</button>
-    <button name="export" class="wordmapper-tooltip" alt="Export the alignments"><i class="fa fa-download"></i> Export</button>
+    <button name="export" class="wordmapper-tooltip" alt="Export the alignments"><i class="fa fa-save"></i> Save and Import</button>
   </div>
 </div>
 
 <div class="wordmapper wordmapper-overlay ">
   
-    <h2>Export</h2>
+    <h2>Save</h2>
   
   <div class="wordmapper-dismiss" title="Dismiss" popout-exclude=""></div>
   <div class="wordmapper-overlay-content">
   <div>
-<!-- wordmapper/client/src/html/export.html -->
-Export data:
-<textarea name="export" class="json">{
-	"type": "site",
-	"id": "www.graeco-arabic-studies.org",
-	"url": "http://www.graeco-arabic-studies.org/compare-texts/work/ars-medica-2/left/1/section/10/active/1%2C2.html",
-	"data": {
-		"type": "alignments",
-		"data": [
-			{
-				"type": "alignment",
-				"data": [
-					{
-						"type": "word",
-						"data": {
-							"index": "20",
-							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
-							"value": "أسخن،"
-						}
-					},
-					{
-						"type": "word",
-						"data": {
-							"index": "75",
-							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
-							"value": "بالطبع،"
-						}
-					}
-				]
-			},
-			{
-				"type": "alignment",
-				"data": [
-					{
-						"type": "word",
-						"data": {
-							"index": "103",
-							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
-							"value": "النبض"
-						}
-					},
-					{
-						"type": "word",
-						"data": {
-							"index": "113",
-							"source": "40e772cc89ee7f97a5cbfb544a464d41b43b3694",
-							"value": "القلب"
-						}
-					}
-				]
-			}
-		]
-	}
-}</textarea>
 
-Import data:
-<textarea name="import" class="json"></textarea>
-<button class="primary wordmapper-import">Import</button>
-<span class="wordmapper-import-messages"></span></div></div>
+    <p>You can save the data of the current selections of the alignend words to retrieve it again or to share it with others.</p>
+
+<!-- UI comment -  -->
+<h3>Save the data of the current selection of aligned words on:</h3>
+
+    <button class="primary wordmapper-import">Hard Drive</button>
+    &nbsp;&nbsp;
+    <button class="primary wordmapper-import">Browser</button>
+    &nbsp;&nbsp;
+    <button class="primary wordmapper-import">Server</button>
+
+    <hr style="height:1px;border:none;color:#ccc;background-color:#ccc;" />
+  
+    <h2>Import</h2>
+<p>You can import the data of the selections of the alignend words others shared with you, or that you saved in your hard drive.</p>
+
+<h3>Import the data of a selection of aligned words</h3>
+
+    <input type="text" placeholder="Define or browse for a CSV file" style="
+	height: 1.25em;
+	width: 20em;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;" >
+    &nbsp;&nbsp;
+    <button class="primary wordmapper-import">Browse</button>
+<br>&nbsp;<br>
+
+<!-- UI comment- sorry but I cannot figure out why I can't change the font face to match the one of the above input form  -->
+	<div style="width:80%">
+		<textarea name="import" placeholder="...or paste here the text from the data of a selection of aligned words of this document" class="json" style="
+        font-size: 14px;
+		    line-height: 1.42857143;
+		    color: #555;
+		    background-color: #fff;
+		    background-image: none;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+        font: BlinkMacSystemFont;"></textarea>
+<br>
+	<button class="default wordmapper-import" style="margin-right:8em">Cancel</button>
+  <button class="primary wordmapper-import pull-right" style="margin-right:8em">Import</button>
+	<span class="wordmapper-import-messages"></span></div>
+
+</div></div>
   
 </div>
