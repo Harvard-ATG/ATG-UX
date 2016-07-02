@@ -58,9 +58,19 @@
 					</i> addSlotBelow</li>
 			</ul>
 		</a>
-		<a href="javascript:;" class="mirador-btn mirador-icon-toc mirador-tooltip selected" aria-label="sidePanelTooltip" data-hasqtip="6" oldtitle="sidePanelTooltip" title="" aria-describedby="qtip-6">
-			<i class="fa fa-bars fa-lg fa-fw">
+
+	<!-- UI comment - Consolidating under one icon both the current image data and image details -->
+		<a href="javascript:;" class="mirador-btn mirador-icon-view-type" role="button" title="viewTypeTooltip" aria-label="viewTypeTooltip">
+			<i class="fa fa-info-circle fa-lg fa-fw">
 			</i>
+			<i class="fa fa-caret-down">
+			</i>
+			<ul class="dropdown image-list" style="display: none;">
+				<li class="new-object-option">
+					Image Information</li>
+				<li class="add-slot-right">
+					Image details and rights</li>
+			</ul>
 		</a>
 		<h3 class="window-manifest-title" aria-label="фывасчям" data-hasqtip="7" oldtitle="фывасчям" title="" aria-describedby="qtip-7">фывасчям</h3>
 	</div>
@@ -80,7 +90,9 @@
 				</ul>
 			</div>
 		</div>
-		<div class="overlay">
+
+<!-- UI commnt - the content of this slider would be shown instead in the same div in which the Image Information is shown -->
+		<!-- <div class="overlay">
 			<div class="sub-title">details:</div>
 			<div class="metadata-listing">
 				<div class="metadata-item">
@@ -101,7 +113,7 @@
 					<div class="metadata-value">unspecified</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="view-container " style="transition: 0s; margin-left: 0px;">
 			<div class="bottomPanel" style="transform: translateY(100%);">
 			</div>
