@@ -22,7 +22,12 @@ window.appConfig = {
 <body marginwidth="0" marginheight="0">
 	<div id="viewer" style="position: fixed; background-image: url(&quot;build/mirador/images/debut_dark.png&quot;); background-color: rgb(51, 51, 51); background-position: left top; background-repeat: repeat;">
 		<div class="mirador-main-menu-bar">
-			<ul class="mirador-main-menu">
+
+<!-- UI comment - Change h3 to span, moving collection name up here -->
+			<div class="window-manifest-title" aria-label="Test Collection" data-hasqtip="7" oldtitle="Test Collection" title="" aria-describedby="qtip-7">Test Collection</div>
+
+<!-- UI comment - moving ul up to line up with collection name -->
+			<ul class="mirador-main-menu" style="margin-top:-2.35em">
 				<li>
 					<a href="javascript:;" class="bookmark-workspace mainmenu-button" aria-label="bookmarkTooltip" data-hasqtip="0" oldtitle="bookmarkTooltip" title="">
 						<span class="fa fa-bookmark fa-lg fa-fw">
@@ -65,69 +70,99 @@ window.appConfig = {
 										<div class="window">
 											<div class="manifest-info">
 												<div class="window-manifest-navigation">
-													<a href="javascript:;" class="mirador-btn mirador-icon-view-type" role="button" title="viewTypeTooltip" aria-label="viewTypeTooltip">
-														<i class="fa fa-photo fa-lg fa-fw">
+
+<!-- UI comment - moved these menu items along the other ones on the left -->
+
+												</div>
+
+<!-- UI comment - add an inline style to allow room for text label -->
+														<a href="javascript:;" class="mirador-btn mirador-icon-toc mirador-tooltip" aria-label="sidePanelTooltip" data-hasqtip="6" oldtitle="sidePanelTooltip" title="" aria-describedby="qtip-6" style="width: 12.5em">
+															<i class="fa fa-bars fa-lg fa-fw">
+															</i>
+
+<!-- UI comment - add a label for this button -->
+															Image Information
+														</a>
+
+<!-- UI comment - Moving this button and menu here, adding an inline style to allow room for text label -->
+
+														<a href="javascript:;" class="mirador-btn mirador-icon-metadata-view mirador-tooltip" role="button" aria-label="metadataTooltip" data-hasqtip="3" oldtitle="metadataTooltip" title="" style="width: 10em">
+															<i class="fa fa-info-circle fa-lg fa-fw">
+															</i>
+
+<!-- UI comment - add a label for this button -->
+															Image Details
+															</a>
+
+<!-- UI comment - add an inline style to allow room for text label -->
+													<a href="javascript:;" class="mirador-btn mirador-icon-window-menu" title="changeLayoutTooltip" aria-label="changeLayoutTooltip" style="width: 7em">
+														<i class="fa fa-th-large fa-lg fa-fw">
 														</i>
 														<i class="fa fa-caret-down">
 														</i>
-														<ul class="dropdown image-list" style="display: none; opacity: 0.98; height: 140px;">
-															<li class="single-image-option">
-																<i class="fa fa-photo fa-lg fa-fw">
-																</i> imageView</li>
+
+<!-- UI comment - add a label for this button -->
+														Layout
+														<ul class="dropdown slot-controls" style="display: none; opacity: 0.98; height: 176px;">
+															<li class="new-object-option">
+																<i class="fa fa-refresh fa-lg fa-fw">
+																</i> newObject</li>
+																<hr class="menu-divider">
+															<li class="add-slot-right">
+																<i class="fa fa-arrow-circle-right fa-lg fa-fw">
+																</i> addSlotRight</li>
+															<li class="add-slot-left">
+																<i class="fa fa-arrow-circle-left fa-lg fa-fw">
+																</i> addSlotLeft</li>
+															<li class="add-slot-above">
+																<i class="fa fa-arrow-circle-up fa-lg fa-fw">
+																</i> addSlotAbove</li>
+															<li class="add-slot-below">
+																<i class="fa fa-arrow-circle-down fa-lg fa-fw">
+																</i> addSlotBelow</li>
+															</ul>
+														</a>
+
+<!-- UI comment - Moving this button and menu here, adding an inline style to allow room for text label -->
+
+														<a href="javascript:;" class="mirador-btn mirador-icon-view-type" role="button" title="viewTypeTooltip" aria-label="viewTypeTooltip" style="width: 6em">
+															<i class="fa fa-photo fa-lg fa-fw">
+															</i>
+															<i class="fa fa-caret-down">
+															</i>
+
+<!-- UI comment - add a label for this button -->
+															Views
+															<ul class="dropdown image-list" style="display: none; opacity: 0.98; height: 140px;">
+																<li class="single-image-option">
+																	<i class="fa fa-photo fa-lg fa-fw">
+																	</i> imageView</li>
 																<li class="book-option">
 																	<i class="fa fa-columns fa-lg fa-fw">
 																	</i> bookView</li>
-																	<li class="scroll-option">
-																		<i class="fa fa-ellipsis-h fa-lg fa-fw">
-																		</i> scrollView</li>
-																		<li class="thumbnails-option">
-																			<i class="fa fa-th fa-lg fa-rotate-90 fa-fw">
-																			</i> thumbnailsView</li>
-																		</ul>
-																	</a>
-																	<a href="javascript:;" class="mirador-btn mirador-icon-metadata-view mirador-tooltip" role="button" aria-label="metadataTooltip" data-hasqtip="3" oldtitle="metadataTooltip" title="">
-																		<i class="fa fa-info-circle fa-lg fa-fw">
-																		</i>
-																	</a>
-																	<a class="mirador-btn mirador-osd-fullscreen mirador-tooltip" role="button" aria-label="fullScreenWindowTooltip" data-hasqtip="4" oldtitle="fullScreenWindowTooltip" title="" aria-describedby="qtip-4">
-																		<i class="fa fa-lg fa-fw fa-expand">
-																		</i>
-																	</a>
-																</div>
-																<a href="javascript:;" class="mirador-btn mirador-close-window remove-object-option mirador-tooltip" aria-label="closeTooltip" data-hasqtip="5" oldtitle="closeTooltip" title="" style="display: none;">
-																	<i class="fa fa-times fa-lg fa-fw">
-																	</i>
-																</a>
-																<a href="javascript:;" class="mirador-btn mirador-icon-window-menu" title="changeLayoutTooltip" aria-label="changeLayoutTooltip">
-																	<i class="fa fa-th-large fa-lg fa-fw">
-																	</i>
-																	<i class="fa fa-caret-down">
-																	</i>
-																	<ul class="dropdown slot-controls" style="display: none; opacity: 0.98; height: 176px;">
-																		<li class="new-object-option">
-																			<i class="fa fa-refresh fa-lg fa-fw">
-																			</i> newObject</li>
-																			<hr class="menu-divider">
-																			<li class="add-slot-right">
-																				<i class="fa fa-arrow-circle-right fa-lg fa-fw">
-																				</i> addSlotRight</li>
-																				<li class="add-slot-left">
-																					<i class="fa fa-arrow-circle-left fa-lg fa-fw">
-																					</i> addSlotLeft</li>
-																					<li class="add-slot-above">
-																						<i class="fa fa-arrow-circle-up fa-lg fa-fw">
-																						</i> addSlotAbove</li>
-																						<li class="add-slot-below">
-																							<i class="fa fa-arrow-circle-down fa-lg fa-fw">
-																							</i> addSlotBelow</li>
-																						</ul>
-																					</a>
-																					<a href="javascript:;" class="mirador-btn mirador-icon-toc mirador-tooltip" aria-label="sidePanelTooltip" data-hasqtip="6" oldtitle="sidePanelTooltip" title="" aria-describedby="qtip-6">
-																						<i class="fa fa-bars fa-lg fa-fw">
-																						</i>
-																					</a>
-																					<h3 class="window-manifest-title" aria-label="Test Collection" data-hasqtip="7" oldtitle="Test Collection" title="" aria-describedby="qtip-7">Test Collection</h3>
-																				</div>
+																<li class="scroll-option">
+																	<i class="fa fa-ellipsis-h fa-lg fa-fw">
+																	</i> scrollView</li>
+																<li class="thumbnails-option">
+																	<i class="fa fa-th fa-lg fa-rotate-90 fa-fw">
+																	</i> thumbnailsView</li>
+															</ul>
+														</a>
+
+<!-- UI comment - Moving this button and menu here, adding an inline style to allow room for text label -->
+
+														<a class="mirador-btn mirador-osd-fullscreen mirador-tooltip" role="button" aria-label="fullScreenWindowTooltip" data-hasqtip="4" oldtitle="fullScreenWindowTooltip" title="" aria-describedby="qtip-4" style="width: 10em">
+															<i class="fa fa-lg fa-fw fa-expand">
+															</i>
+
+<!-- UI comment - add a label for this button -->
+															Expand Viewer
+														</a>
+														<a href="javascript:;" class="mirador-btn mirador-close-window remove-object-option mirador-tooltip" aria-label="closeTooltip" data-hasqtip="5" oldtitle="closeTooltip" title="" style="display: none;">
+															<i class="fa fa-times fa-lg fa-fw">
+															</i>
+														</a>
+													</div>
 																				<div class="content-container">
 																					<div class="sidePanel minimized" style="transition-duration: 0.3s; border: none; width: 20px;">
 																						<ul class="tabGroup">
