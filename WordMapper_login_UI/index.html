@@ -1,25 +1,66 @@
-<!-- UI comment - current button -->
+<!-- UI comment - changing the Account button to "primary" since we want users to consider this a primary action  -->
 
 <div class="wordmapper-buttons wordmapper-buttons-right">
-	<button name="login" class="wordmapper-account-btn"><i class="fa fa-user"></i> <span>Account</span></button>
+	<button name="login" class="primary wordmapper-account-btn"><i class="fa fa-user"></i>&nbsp;&nbsp;<span>Account</span></button>
 </div>
 
-<!-- UI comment - current login interface -->
+<!-- UI comment - adding styles to add a multi-line tooltip upon hovering the new info icon -->
 
 <div>
+
+	<style>
+	.wordmapper-link-tooltip {
+    display: inline;
+    position: relative;
+}
+.wordmapper-link-tooltip:hover:after{
+    font-size: 12px;
+    background: #333;
+    background: rgba(0,0,0,.7);
+    border-radius: 5px;
+    top: 38px;
+    color: #fff;
+    content: attr(alt);
+    right: 0;
+    padding: 5px 15px;
+    position: absolute;
+    width: 20em;
+}
+.wordmapper-link-tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    top: 32px;
+    content: "";
+    left: 50%;
+    position: absolute;
+}
+.info-link {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    border: none rgba(0, 0, 0, 0);
+    text-decoration: none;
+    height: 32px;
+}
+	</style>
 <!-- wordmapper/client/src/html/login.html -->
 	<div class="wordmapper-account" style="display: block;">
-  
+
+	  	<h3 style="color:#fff">Word&nbsp;Wrapper login</h3>
+	  	<div style="color:#fff; margin-bottom: 1em"><strong>Access your online account</strong> 
+	  		<a name="export" class="info-link wordmapper-link-tooltip" alt="Logging in to you raccount will allow access your data from any computer."><i class="fa fa-info-circle"></i></a></div>
+
 	  	<div class="wordmapper-login">
 		    <input type="text" name="email" placeholder="enter email...">
 		    <input type="password" name="password" placeholder="enter password...">
+	    
+	      	<p><a href="http://localhost:8000/user/register" target="_blank" style="margin-left:1em;">Register</a>
 		    
-		    <button name="login" class="primary" style="width: 125px;">Sign In</button>
-	    
-	      	<a href="http://localhost:8000/user/register" target="_blank" style="margin-left:1em;">Register</a>
-	    
+		    <button name="login" class="primary pull-right" style="width: 125px;">Sign In</button></p>
+		    
 	  	</div>
-	  
+		  
 	</div>
-	
+
 </div>
