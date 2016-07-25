@@ -1,0 +1,68 @@
+<!-- UI comment - CSS of current wordmapper-overlay styles -->
+
+.wordmapper-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.98;
+    background-color: #fff;
+    color: #000;
+    padding: 1em;
+    top: 45px;
+    overflow: scroll;
+    z-index: 1001;
+}
+
+.wordmapper-overlay-hidden {
+    z-index: -1;
+    display: none;
+}
+
+.wordmapper-overlay-content {
+    width: calc(100% - 50px);
+}
+
+.wordmapper-overlay-content textarea.json {
+    display: block;
+    min-height: 25%;
+    min-height: 150px;
+    width: 85%;
+    outline: none;
+    color: #000;
+    border: 1px solid #000;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+
+<!-- UI comment - HTML of current wormapper-overlay -->
+
+<div>
+<!-- wordmapper/client/src/html/overlay.html -->
+<div class="wordmapper wordmapper-overlay ">
+  
+    <h2>Export</h2>
+  
+  <div class="wordmapper-dismiss" title="Dismiss" popout-exclude=""></div>
+  <div class="wordmapper-overlay-content">
+  <div>
+<!-- wordmapper/client/src/html/export.html -->
+Export data:
+<textarea name="export" class="json">{
+  "type": "site",
+  "id": "www.graeco-arabic-studies.org",
+  "url": "http://www.graeco-arabic-studies.org/compare-texts/work/ars-medica-2/left/2/right/1/active/2%2C1.html",
+  "data": {
+    "type": "alignments",
+    "data": []
+  }
+}</textarea>
+
+Import data:
+<textarea name="import" class="json"></textarea>
+<button class="primary wordmapper-import">Import</button>
+<span class="wordmapper-import-messages"></span></div></div>
+  
+</div></div>
