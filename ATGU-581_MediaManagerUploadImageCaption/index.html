@@ -4,6 +4,8 @@
     <ul class="files files-queued">
         ...
     </ul>
+<!--UI comment - adding a reference to the uploaded image names-->
+    <p>The image name of the uploaded files can be edited after the images are uploaded to the library.</p>
     <input type="button" class="btn btn-primary" value="Upload" ng-disabled="wc.Droplet.interface.isUploading() || wc.filesToUpload == 0" ng-click="wc.Droplet.uploadFiles()">
     <label>Number of files to upload:</label> 3 <!-- ngIf: wc.fileUploadSize > 0 --><i ng-if="wc.fileUploadSize > 0" class="ng-binding ng-scope">(2.50 MB)</i><!-- end ngIf: wc.fileUploadSize > 0 -->
 </droplet>
