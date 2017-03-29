@@ -1,6 +1,10 @@
-
-<div class="form-group ng-scope" ng-if="wc.webimage.url != ''" style="">
+<!--UI comment - removing the opacity-->
+<div class="form-group ng-scope" ng-if="wc.webimage.url != ''" style="opacity: 1">
     <label for="webimagepreview" class="preview">Preview:</label>
-    <img id="webimagepreview" class="preview" ng-src="https://i.stack.imgur.com/zOE2e.pn"
-       src="https://i.stack.imgur.com/zOE2e.pn">
+    <!--<img id="webimagepreview" class="preview" ng-src="https://i.stack.imgur.com/zOE2e.pn"-->
+       <!--src="https://i.stack.imgur.com/zOE2e.pn">-->
+<!--UI comment - Showing the warning in a Bootstrap alert-->
+    <div class="alert alert-danger" role="alert">
+        The image you are requesting does not exist or is not longer available. imgur.com
+    </div>
 </div>
