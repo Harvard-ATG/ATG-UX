@@ -34,42 +34,28 @@
 <h2>Instructor dashboard</h2>
 
 <div style="margin: 1em 0;">
-The instructor dashboard displays annotations created in this course. Use the settings below to group and filter annotations.
+The instructor dashboard displays all annotations for this course. Use the options below to group and filter annotations according to your own criteria.
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">View options</h3>
+    <h3 class="panel-title">Dashboard options</h3>
   </div>
   <div class="panel-body">
     <div style="margin-top: 1em;">
       <div class="pull-left" style="width: 100px">
-        Group by:
+        Group:
       </div>
       <div class="btn-group pull-left" role="group" aria-label="group options">
-        <button type="button" class="btn btn-default">By Assignment</button>
-        <button type="button" class="btn btn-default">By Student</button>
+        <button type="button" class="btn btn-default active" aria-pressed="true">Annotations by Assignment</button>
+        <button type="button" class="btn btn-default">Annotations by Student</button>
       </div>
       <div style="clear:both;"></div>
     </div>
 
     <div style="margin-top: 1em;">
       <div class="pull-left" style="width: 100px">
-        Filter by:
-      </div>
-      <div class="dropdown pull-left">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Filter Students
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#"><input type="text" placeholder="Search..."></a></li>
-          <li><a href="#">Select all</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#"><input type="checkbox">John A.</a></li>
-          <li><a href="#"><input type="checkbox">James X.</a></li>
-          <li><a href="#"><input type="checkbox">Joseph J.</a></li>
-        </ul>
+        Filter:
       </div>
       <div class="dropdown pull-left">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -86,21 +72,35 @@ The instructor dashboard displays annotations created in this course. Use the se
           <li><a href="#"><input type="checkbox">Week 2.1</a></li>
         </ul>
       </div>
+      <div class="dropdown pull-left">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Filter Students
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#"><input type="text" placeholder="Search..."></a></li>
+          <li><a href="#">Select all</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#"><input type="checkbox">John A.</a></li>
+          <li><a href="#"><input type="checkbox">James X.</a></li>
+          <li><a href="#"><input type="checkbox">Joseph J.</a></li>
+        </ul>
+      </div>
       <div style="clear:both;"></div>
     </div>
 
     <div style="margin-top: 1em;">
       <div class="pull-left" style="width: 100px">
-        Order by:
+        Order:
       </div>
       <div class="dropdown pull-left">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Most recent annotation
+          Student Name, Annotation Date
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Student Name</a></li>
-          <li><a href="#">Assignment Name</a></li>
+          <li><a href="#">Assignment Name, Annotation Date</a></li>
+          <li><a href="#">Annotation Date</a></li>
         </ul>
       </div>
       <div style="clear:both;"></div>
@@ -113,13 +113,24 @@ The instructor dashboard displays annotations created in this course. Use the se
   </div>
 </div>
 
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Search ...">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Go!</button>
-  </span>
-</div><!-- /input-group -->
+<!-- CONTENT -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Week 1.1</h3>
+  </div>
+  <div class="panel-body">
+		
+  </div>
+</div>
 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Week 1.2</h3>
+  </div>
+  <div class="panel-body">
+		
+  </div>
+</div>
 
 </div></main>
 
