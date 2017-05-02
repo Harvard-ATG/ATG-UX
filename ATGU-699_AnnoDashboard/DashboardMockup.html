@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://localhost:8000/lti_init/x/instructor_dashboard_view -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./DashboardMockup_files/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="./DashboardMockup_files/base.css">
+    <script src="./DashboardMockup_files/jquery-1.9.1.js"></script>
+    <link href="./DashboardMockup_files/bootstrap.min.css" media="all" rel="stylesheet">
+    <script src="./DashboardMockup_files/bootstrap.min.js"></script>
+    <title>HarvardX Annotation Tool</title>
+    <style type="text/css">
+.dropdown input[type="checkbox"] {
+  margin-right: 4px;
+}
+    </style>
+</head>
+<body>
+<header class="header" role="banner">
+    <div id="banner-logo-left">
+        <div class="site-title">
+            <a href="http://localhost:8000/lti_init/admin_hub/">The HarvardX Annotation Tool</a>
+        </div>
+    </div>
+    <!-- Broken off into two sections, information on the left and content on the right -->
+    <nav class="navigation" role="navigation" aria-label="Main Menu">
+        <a href="http://localhost:8000/lti_init/admin_hub/" class="selected"><i class="fa fa-home"></i>  Home</a>
+            <a target="_blank" href="https://wiki.harvard.edu/confluence/display/ANNOTATIONSX/AnnotationsX">Manual</a>
+            <a role="button" href="http://localhost:8000/lti_init/x/instructor_dashboard_view">Dashboard</a>
+    </nav>
+</header>
+<main class="container" role="main">
+
+<h2>Instructor dashboard</h2>
+
+<div style="margin: 1em 0;">
+The instructor dashboard displays annotations created in this course. Use the settings below to group and filter annotations.
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">View options</h3>
+  </div>
+  <div class="panel-body">
+    <div style="margin-top: 1em;">
+      <div class="pull-left" style="width: 100px">
+        Group by:
+      </div>
+      <div class="btn-group pull-left" role="group" aria-label="group options">
+        <button type="button" class="btn btn-default">By Assignment</button>
+        <button type="button" class="btn btn-default">By Student</button>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div style="margin-top: 1em;">
+      <div class="pull-left" style="width: 100px">
+        Filter by:
+      </div>
+      <div class="dropdown pull-left">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Filter Students
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#"><input type="text" placeholder="Search..."></a></li>
+          <li><a href="#">Select all</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#"><input type="checkbox">John A.</a></li>
+          <li><a href="#"><input type="checkbox">James X.</a></li>
+          <li><a href="#"><input type="checkbox">Joseph J.</a></li>
+        </ul>
+      </div>
+      <div class="dropdown pull-left">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Filter Assignments
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#"><input type="text" placeholder="Search..."></a></li>
+          <li><a href="#">Select all</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#"><input type="checkbox">Week 1.1</a></li>
+          <li><a href="#"><input type="checkbox">Week 1.2</a></li>
+          <li><a href="#"><input type="checkbox">Week 1.3</a></li>
+          <li><a href="#"><input type="checkbox">Week 2.1</a></li>
+        </ul>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div style="margin-top: 1em;">
+      <div class="pull-left" style="width: 100px">
+        Order by:
+      </div>
+      <div class="dropdown pull-left">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Most recent annotation
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Student Name</a></li>
+          <li><a href="#">Assignment Name</a></li>
+        </ul>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div style="margin-top: 1em;">
+      <button type="button" class="btn btn-primary">Apply Options</button>
+      <button type="button" class="btn btn-default">Reset View</button>
+    </div>
+  </div>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search ...">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Go!</button>
+  </span>
+</div><!-- /input-group -->
+
+
+</div></main>
+
+</body></html>
