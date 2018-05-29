@@ -1,0 +1,55 @@
+
+<div class="panel-body">
+    <div ng-show="$ctrl.isLoading" class="ng-hide">
+        <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar"
+                                                             style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-0-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(0deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-1-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(30deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-2-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(60deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-3-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(90deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-4-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(120deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-5-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(150deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-6-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(180deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-7-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(210deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-8-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(240deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-9-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(270deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-10-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(300deg) translate(10px, 0px); border-radius: 2px;"></div></div><div
+                style="position: absolute; top: -2px; opacity: 0.25; animation: opacity-100-25-11-12 1s linear infinite;"><div
+                style="position: absolute; width: 12px; height: 5px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center 0px; transform: rotate(330deg) translate(10px, 0px); border-radius: 2px;"></div></div></div></span>
+    </div>
+
+    <!-- ngIf: $ctrl.images.length == 0 -->
+    <div ng-if="$ctrl.images.length == 0" class="ng-scope">
+        There are no images selected for this collection.
+        Use images in this collection by adding them from the image library.
+    </div><!-- end ngIf: $ctrl.images.length == 0 -->
+
+    <ul class="list-inline ng-pristine ng-untouched ng-valid ng-scope ng-not-empty" style="overflow:auto;"
+        as-sortable="$ctrl.dragControlListeners" ng-model="$ctrl.images">
+        <!-- ngRepeat: collectionImage in $ctrl.images -->
+    </ul>
+
+    <div style="margin-top: 20px;">
+        <button type="button" class="btn btn-link" ng-click="$ctrl.toggleIiifUrl();"><i class="collection__icon-iiif"
+                                                                                        style="margin-right: 5px;"></i>View
+            link to this collection
+        </button>
+        <button type="button" class="pull-right btn btn-default" ng-disabled="$ctrl.images.length == 0"
+                ng-click="$ctrl.openCollection()" disabled="disabled">Open this Collection
+        </button>
+    </div>
+    <div ng-show="$ctrl.showIiifUrl" class="collection__iiifurl" style=""><input type="text" class="form-control"
+                                                                                 value="https://media-management-api.dev.tlt.harvard.edu/api/iiif/manifest/128"
+                                                                                 readonly=""></div>
+</div>
