@@ -1,4 +1,4 @@
-
+<!--There are 3 UI comments in this commit-->
 <div class="panel-body">
     <div ng-show="$ctrl.isLoading" class="ng-hide">
         <span us-spinner="{top:'50%'}" class="ng-scope"><div class="spinner" role="progressbar"
@@ -45,11 +45,30 @@
                                                                                         style="margin-right: 5px;"></i>View
             link to this collection
         </button>
-        <button type="button" class="pull-right btn btn-default" ng-disabled="$ctrl.images.length == 0"
+
+<!--UI comment #1 - changing to class btn-primary-->
+        <button type="button" class="pull-right btn btn-primary" ng-disabled="$ctrl.images.length == 0"
                 ng-click="$ctrl.openCollection()" disabled="disabled">Open this Collection
         </button>
     </div>
     <div ng-show="$ctrl.showIiifUrl" class="collection__iiifurl" style=""><input type="text" class="form-control"
                                                                                  value="https://media-management-api.dev.tlt.harvard.edu/api/iiif/manifest/128"
                                                                                  readonly=""></div>
+
+
+<!--UI comment #2 - adding the alert-->
+    <div class="alert alert-danger" role="alert" style="margin-top: 1em">
+        This URL is not correct. Please try again.
+    </div>
+
+<!--UI comment #3 - adding the URL hint-->
+    <div style="margin-top: 1em">
+        <p>
+            <strong>IIIF Manifest example from Art Museum - select only the second portion of the URL:</strong>
+        <br>
+            https://iiif.harvardartmuseums.org/viewers/mirador?manifest=
+            <mark>https://iiif.harvardartmuseums.org/manifests/object/295813</mark>
+        </p>
+    </div>
+
 </div>
